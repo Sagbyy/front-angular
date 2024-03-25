@@ -178,8 +178,25 @@
 </style>
 
 <main class="main">
+  <nav class="navbar navbar-expand navbar-light bg-light">
+
+    <ul ngbNav class="navbar-nav mr-auto">
+      <li ngbNavItem routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        <a ngbNavLink routerLink="/">Salut</a>
+      </li>
+
+      <li ngbNavItem routerLinkActive="active">
+        <a ngbNavLink routerLink="/">Les</a>
+      </li>
+
+      <li ngbNavItem routerLinkActive="active">
+        <a ngbNavLink routerLink="/">Amis</a>
+      </li>
+    </ul>
+  </nav>
+
   <div class="content">
-    <a routerLink="/">Home</a>
+    <a routerLink="/login">Sign up</a>
   </div>
 </main>
 
