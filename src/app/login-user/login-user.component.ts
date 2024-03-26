@@ -12,8 +12,8 @@ export class LoginUserComponent {
 
   submitForm(loginData: any) {
     this.authService.loginUser(loginData).subscribe(response => {
-
-      console.log(response);
+           console.log("finished http get /api/list-tournamenent",response);
     });
+  }, err => {
   }
 }
