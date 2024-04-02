@@ -1,7 +1,12 @@
-import { Routes } from '@angular/router';
-import {LoginUserComponent} from "./login-user/login-user.component";
-import {ListTournamentComponent} from "./list-tournament/list-tournament.component";
+import {RouterModule, Routes} from '@angular/router';
+import {AppComponent} from "./app.component";
+import {DetailComponent} from "./detail/detail.component";
+import {NgModule} from "@angular/core";
+import {TournamentListComponent} from "./tournament-list/tournament-list.component";
+import {CreateTournamentComponent} from "./create-tournament/create-tournament.component";
 
 export const routes: Routes = [
-{path:'login', component: LoginUserComponent },
-{path:'list-Tournament', component: LoginUserComponent }];
+  { path: '', component: TournamentListComponent },
+  { path: 'detail/:id', component: DetailComponent },
+  { path: 'create-tournament', component: CreateTournamentComponent }
+];

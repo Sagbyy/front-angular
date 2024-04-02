@@ -1,22 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink,RouterLinkActive } from '@angular/router';
-import {
-  NgbDropdown,
-  NgbDropdownItem,
-  NgbDropdownMenu,
-  NgbNav,
-  NgbNavItem,
-  NgbNavLink
-} from "@ng-bootstrap/ng-bootstrap";
+import {RouterLink, RouterOutlet} from '@angular/router';
+import { TournamentListComponent } from "./tournament-list/tournament-list.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, RouterLinkActive,
-    NgbNavItem, NgbNavLink, NgbNav,
-    NgbDropdown, NgbDropdownMenu, NgbDropdownItem],
+  imports: [RouterOutlet, TournamentListComponent, HttpClientModule, RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'front-angular';
