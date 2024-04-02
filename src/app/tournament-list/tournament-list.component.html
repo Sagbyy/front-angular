@@ -1,0 +1,10 @@
+<h1 class="text-center mb-5">Liste des tournois</h1>
+
+<ul *ngFor="let tournament of tournaments">
+  <li class="card shadow-lg p-2 mt-3">
+    {{ tournament.name }}
+    <div class="d-flex flex-row gap-4 mt-2">
+      <button class="btn btn-primary" routerLink="/detail/{{ tournament.id }}">Détails</button>
+    </div>
+  </li>
+</ul>

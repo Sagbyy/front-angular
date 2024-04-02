@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterOutlet} from '@angular/router';
+import { TournamentListComponent } from "./tournament-list/tournament-list.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, TournamentListComponent, HttpClientModule, RouterLink],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'front-angular';
